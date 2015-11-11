@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Simple markers</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div data-locations='[[-64.9533931,18.3353596],[-71.014118,42.4681642],[-72.6289261,42.0901951],[-73.2485875,42.3340656],[-71.7583001,42.5283324],[-71.7531774,42.3207718],[-71.4961728,42.1516816],[-71.3819171,42.301113],[-71.21253300000001,42.4809813],[-71.1391364,42.6562285],[-71.14493089999999,42.1387149],null,[-84.5782122,39.0254024],[-71.3958616,42.0817162],[-70.7249221,42.1957279],[-71.0609226,42.3547658],[-71.081626,42.3500889],[-71.1193074,42.3741946],[-71.1207675,42.373231],[-71.00545699999999,42.2034925]]'></div>
+  <div id="map"></div>
+  <script>
+
+function initMap() {
+var myLatLng = {lat: -25.363, lng: 131.044};
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 4,
+  center: myLatLng
+});
+
+var marker = new google.maps.Marker({
+  position: myLatLng,
+  map: map,
+  title: 'Hello World!'
+});
+}
+
+  </script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap"></script>
+</body>
+</html>
